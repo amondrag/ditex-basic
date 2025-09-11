@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DITEX — Textile Manufacturing • Puebla, MX</title>
   <meta name="description" content="DITEX is a textile maquila in Puebla, Mexico. We produce medical scrubs, uniforms and custom runs with modern, reliable processes." />
@@ -12,12 +12,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <!-- Use a relative path so it works locally and on Vercel -->
+  <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
-<header>
+  <header>
     <div class="container nav">
-      <a href="/index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Textile Manufacturing</span></a>
+      <a href="/index.html" class="brand">
+        <span class="brand-logo"></span>
+        <span><em class="space-grotesk">DITEX</em> • Textile Manufacturing</span>
+      </a>
       <nav>
         <ul>
           <li><a href="/work.html">Work</a></li>
@@ -27,7 +31,10 @@
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="lang" aria-label="Language switcher"><a id="to-en" hreflang="en" lang="en">EN</a>/<a id="to-es" hreflang="es" lang="es">ES</a></div>
+      <!-- Add no-JS fallbacks -->
+      <div class="lang" aria-label="Language switcher">
+        <a id="to-en" hreflang="en" lang="en" href="/">EN</a>/<a id="to-es" hreflang="es" lang="es" href="/es/">ES</a>
+      </div>
     </div>
   </header>
 
@@ -37,30 +44,34 @@
         <div>
           <div class="stack" data-reveal>
             <div class="line" data-parallax-y="0.12">We are</div>
-            <div class="line" data-parallax-y="0.08">DITEX®</div>
-            <div class="line" data-parallax-y="0.10">Garment</div>
-            <div class="line brandmark" data-parallax-y="0.08"><small>We are</small><span>Makers</span></div>
+            <div class="line" data-parallax-y="0.10">DITEX®</div>
+            <div class="line" data-parallax-y="0.12">Garment</div>
+            <div class="line brandmark" data-parallax-y="0.10"><small>We are</small><span>Makers</span></div>
           </div>
-          <p class="muted" style="margin-top:20px" data-reveal>
+          <p class="muted mt-10" data-reveal>
             A focused manufacturer of <strong>medical scrubs</strong>, <strong>uniforms</strong> and custom runs. Precise cuts, consistent stitching and clear timelines.
           </p>
         </div>
         <div>
-          <div class="strip" data-marquee><div class="marquee">
-            <img alt="Cutting table" src="https://images.unsplash.com/photo-1581090462747-5afadbfbbf02?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Overlock" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Fabric rolls" src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Stitch" src="https://images.unsplash.com/photo-1581091870622-1b71f3f5c8ee?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Packaging" src="https://images.unsplash.com/photo-1550332781-aecd27f7434f?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Embroidery" src="https://images.unsplash.com/photo-1616124843693-422cde1039a1?q=80&w=1200&auto=format&fit=crop"/>
-          </div></div>
-          <div class="strip x2" data-marquee><div class="marquee" style="animation-duration:34s">
-            <img alt="QC" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Uniforms" src="https://images.unsplash.com/photo-1580894894518-b0a356a89b5b?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Labels" src="https://images.unsplash.com/photo-1602293589930-45aad59ba3b1?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Workshop" src="https://images.unsplash.com/photo-1580398278565-99c0063925f2?q=80&w=1200&auto=format&fit=crop"/>
-            <img alt="Cut" src="https://images.unsplash.com/photo-1618355776462-05369e26f758?q=80&w=1200&auto=format&fit=crop"/>
-          </div></div>
+          <div class="strip" data-marquee>
+            <div class="marquee">
+              <img alt="Cutting table" src="https://images.unsplash.com/photo-1581090462747-5afadbfbbf02?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Overlock" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Fabric rolls" src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Stitch" src="https://images.unsplash.com/photo-1581091870622-1b71f3f5c8ee?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Packaging" src="https://images.unsplash.com/photo-1550332781-aecd27f7434f?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Embroidery" src="https://images.unsplash.com/photo-1616124843693-422cde1039a1?q=80&w=1200&auto=format&fit=crop"/>
+            </div>
+          </div>
+          <div class="strip x2" data-marquee>
+            <div class="marquee marquee-slow">
+              <img alt="QC" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Uniforms" src="https://images.unsplash.com/photo-1580894894518-b0a356a89b5b?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Labels" src="https://images.unsplash.com/photo-1602293589930-45aad59ba3b1?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Workshop" src="https://images.unsplash.com/photo-1580398278565-99c0063925f2?q=80&w=1200&auto=format&fit=crop"/>
+              <img alt="Cut" src="https://images.unsplash.com/photo-1618355776462-05369e26f758?q=80&w=1200&auto=format&fit=crop"/>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -72,10 +83,10 @@
           <p class="muted" data-reveal>Crafting reliable textile solutions. See more in <a href="/work.html">Work</a>.</p>
         </div>
         <div class="works">
-          <article class="work" data-reveal data-tilt><h3>Heat • Scrubs</h3><p>Two‑piece scrubs, teal & navy, XS–XXL. 400 sets in 2 weeks.</p></article>
-          <article class="work" data-reveal data-tilt><h3>Digital • Lab Coats</h3><p>Custom-fit patterns with embroidery. 150 units, 3‑week cycle.</p></article>
+          <article class="work" data-reveal data-tilt><h3>Heat • Scrubs</h3><p>Two-piece scrubs, teal & navy, XS–XXL. 400 sets in 2 weeks.</p></article>
+          <article class="work" data-reveal data-tilt><h3>Digital • Lab Coats</h3><p>Custom-fit patterns with embroidery. 150 units, 3-week cycle.</p></article>
           <article class="work" data-reveal data-tilt><h3>Surreal • Uniforms</h3><p>Industrial uniforms with reflective tapes. 220 units, phased.</p></article>
-          <article class="work" data-reveal data-tilt><h3>Lumos • Packaging</h3><p>Private‑label bags with size stickers & lot codes.</p></article>
+          <article class="work" data-reveal data-tilt><h3>Lumos • Packaging</h3><p>Private-label bags with size stickers & lot codes.</p></article>
         </div>
       </div>
     </section>
@@ -84,7 +95,7 @@
       <div class="container">
         <div class="section-head">
           <h2 data-reveal>We are always striving to improve output.</h2>
-          <p class="muted" data-reveal>On‑time, consistent and ISO‑friendly processes built for scale.</p>
+          <p class="muted" data-reveal>On-time, consistent and ISO-friendly processes built for scale.</p>
         </div>
         <div class="digits">
           <div class="digit" data-reveal><b data-counter data-target="80">0</b><span>%+</span><div class="label">repeat clients</div></div>
@@ -109,13 +120,15 @@
           <div class="logo">Universidad X</div>
           <div class="logo">Aquarium MX</div>
         </div>
-        <div style="height:20px"></div>
+
+        <div class="spacer-20"></div>
+
         <div class="innovation" data-reveal>
           <div>
-            <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Innovation</div>
-            <h3 style="font-family:'Space Grotesk'; font-size:clamp(24px,3vw,36px); margin:4px 0 0">From Cut & Sew To Consistent Experiences.</h3>
+            <div class="muted kicker">Innovation</div>
+            <h3 class="headline">From Cut & Sew To Consistent Experiences.</h3>
           </div>
-          <div style="text-align:right"><a class="cta" href="/services.html">Learn more</a></div>
+          <div class="text-right"><a class="cta" href="/services.html">Learn more</a></div>
         </div>
       </div>
     </section>
@@ -124,25 +137,25 @@
       <div class="container">
         <div class="innovation" data-reveal>
           <div>
-            <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Get in touch</div>
-            <h3 style="font-family:'Space Grotesk'; font-size:clamp(24px,3vw,36px); margin:4px 0 0">Request a sample or quote</h3>
-            <p class="muted" style="margin:6px 0 0">We reply within 24–48 hours. Send tech packs, size grids or references.</p>
+            <div class="muted kicker">Get in touch</div>
+            <h3 class="headline">Request a sample or quote</h3>
+            <p class="muted mt-6">We reply within 24–48 hours. Send tech packs, size grids or references.</p>
           </div>
-          <div style="text-align:right"><a class="cta" href="/contact.html">Start a project</a></div>
+          <div class="text-right"><a class="cta" href="/contact.html">Start a project</a></div>
         </div>
       </div>
     </section>
   </main>
 
-<footer>
+  <footer>
     <div class="container footer-grid">
       <div>
-        <a href="/index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Puebla, MX</span></a>
-        <p class="muted" style="margin-top:10px">A textile maquila focused on medical scrubs and uniforms. Modern processes, consistent output.</p>
+        <a href="/index.html" class="brand"><span class="brand-logo"></span><span><em class="space-grotesk">DITEX</em> • Puebla, MX</span></a>
+        <p class="muted mt-10">A textile maquila focused on medical scrubs and uniforms. Modern processes, consistent output.</p>
       </div>
       <div>
-        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Company</div>
-        <ul style="list-style:none; padding:0; margin:8px 0 0; color:var(--muted)">
+        <div class="muted kicker">Company</div>
+        <ul class="list-clean muted mt-8">
           <li><a href="/about.html">About</a></li>
           <li><a href="/work.html">Work</a></li>
           <li><a href="/services.html">Services</a></li>
@@ -151,16 +164,19 @@
         </ul>
       </div>
       <div>
-        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Contact</div>
-        <p class="muted" style="margin:8px 0 0">hello@ditex.mx<br/>Puebla, México</p>
+        <div class="muted kicker">Contact</div>
+        <p class="muted mt-8">hello@ditex.mx<br/>Puebla, México</p>
       </div>
     </div>
-    <div class="container" style="margin-top:18px; display:flex; justify-content:space-between; gap:16px; color:var(--muted)">
+
+    <div class="container footer-meta">
       <small>© <span id="year"></span> DITEX. All rights reserved.</small>
       <small>Layout patterns inspired by Glow R template.</small>
     </div>
   </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script type="module" src="/assets/interactions.js"></script>
+  <!-- Use a relative path so it works locally and on Vercel -->
+  <script type="module" src="./assets/interactions.js"></script>
 </body>
 </html>
