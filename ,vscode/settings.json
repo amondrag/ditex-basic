@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "html.format.wrapLineLength": 100,
+  "css.validate": true,
+  "javascript.validate.enable": true,
+  "spellright.language": ["en", "es"],
+  "liveServer.settings.root": "/",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.wait": 200
+}

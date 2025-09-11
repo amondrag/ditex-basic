@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ritwickdey.liveserver",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "formulahendry.auto-rename-tag",
+    "voorjaar.windicss-intellisense"
+  ]
+}

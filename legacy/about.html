@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About DITEX — Textile Maquila • Puebla, MX</title>
+  <meta name="description" content="About DITEX: a textile maquila specialized in medical scrubs, uniforms and custom production runs. Precision, quality and clear timelines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --ink:#0a0a0a; --paper:#fff; --muted:#6b7280; --line:#e5e7eb; --accent:#0ea5e9; --accent-2:#a78bfa; --radius:18px; --maxw:1200px; --shadow:0 20px 60px rgba(0,0,0,.08)}
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .container{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(255,255,255,.8); border-bottom:1px solid var(--line); transition: box-shadow .25s ease, background .25s ease}
+    header.is-scrolled{ background:rgba(255,255,255,.95); box-shadow:var(--shadow) }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:68px}
+    .brand{display:flex; gap:12px; align-items:center; font-weight:800; letter-spacing:.4px}
+    .brand-logo{width:28px; height:28px; border-radius:50%; background:conic-gradient(from 210deg, var(--accent), var(--accent-2))}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    .cta{display:inline-flex; align-items:center; gap:10px; background:#111827; color:#fff; font-weight:700; padding:10px 14px; border-radius:999px}
+
+    .hero{padding:72px 0 24px}
+    .stack{display:grid; gap:4px; font-family:"Space Grotesk", Inter, sans-serif; line-height:1}
+    .line{font-size:clamp(38px, 8vw, 100px); font-weight:800; letter-spacing:-.02em; will-change: transform}
+    .muteline{color:#d1d5db}
+
+    section{padding:72px 0}
+    .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:24px; border-bottom:1px solid var(--line); padding-bottom:14px}
+    .section-head h2{font-family:"Space Grotesk"; font-size:clamp(28px,3.2vw,44px); margin:0}
+    .section-head p{color:var(--muted); max-width:560px}
+
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .card{padding:18px; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); background:#fff}
+
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+    .gallery img{border-radius:14px; height:160px; object-fit:cover; filter:grayscale(1)}
+
+    .logos{display:grid; grid-template-columns:repeat(6,1fr); gap:16px}
+    .logo{padding:18px 14px; border-radius:12px; border:1px dashed var(--line); text-align:center; color:var(--muted); background:#fff}
+
+    .awards{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .award{padding:18px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:var(--shadow)}
+
+    .team{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .person{border:1px solid var(--line); border-radius:18px; overflow:hidden; background:#fff; box-shadow:var(--shadow)}
+    .person img{height:260px; width:100%; object-fit:cover; filter:grayscale(1)}
+    .person .bio{padding:14px}
+    .muted{color:var(--muted)}
+
+    /* Reveal */
+    [data-reveal]{opacity:0; transform:translateY(16px); transition: all .6s cubic-bezier(.2,.7,.2,1)}
+    .is-visible{opacity:1; transform:none}
+
+    /* Optional tilt */
+    [data-tilt]{ will-change: transform; transform-style: preserve-3d; transition: transform .12s ease-out; }
+
+    /* Scroll progress bar */
+    body::before{
+      content:""; position:fixed; left:0; top:0; height:2px; width:calc(var(--scroll, 0) * 100vw);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index:9999; pointer-events:none;
+    }
+
+    footer{border-top:1px solid var(--line); padding:28px 0 60px}
+    .footer-grid{display:grid; grid-template-columns: 1.2fr .8fr .8fr; gap:18px}
+
+    @media (max-width: 1024px){
+      .grid-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .awards{grid-template-columns:repeat(2,1fr)}
+      .team{grid-template-columns:repeat(2,1fr)}
+      .logos{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){ .team,.awards,.logos{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Textile Maquila</span></a>
+      <nav>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="contact.html">Get a quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="stack" data-reveal>
+          <div class="line" data-parallax-y="0.12">We're</div>
+          <div class="line" data-parallax-y="0.18">focused on</div>
+          <div class="line" data-parallax-y="0.24">powering</div>
+          <div class="line" data-parallax-y="0.10">your operation.</div>
+        </div>
+        <p class="muted" style="max-width:720px; margin-top:10px" data-reveal>Let's build something reliable together. Your specs, our commitment to precision manufacturing and on‑time delivery.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card" data-reveal data-tilt>
+          <small class="muted">/01</small>
+          <h3 style="font-family:'Space Grotesk'">Creativity with a backbone</h3>
+          <p class="muted">Design for manufacturability: patterns, grading and fabric selection aligned to production constraints so every pixel on the tech pack translates to clean seams.</p>
+        </div>
+        <div class="card" data-reveal data-tilt>
+          <small class="muted">/02</small>
+          <h3 style="font-family:'Space Grotesk'">Strategy meets scale</h3>
+          <p class="muted">Pilot runs → scale‑up. Capacity planning, line balancing and QC checkpoints to keep timelines predictable.</p>
+        </div>
+        <div class="card" data-reveal data-tilt>
+          <small class="muted">/03</small>
+          <h3 style="font-family:'Space Grotesk'">No fluff, just quality</h3>
+          <p class="muted">Reinforced seams, consistent sizing and packaging standards. Focused on medical and industrial apparel.</p>
+        </div>
+        <div class="card" data-reveal data-tilt>
+          <small class="muted">/04</small>
+          <h3 style="font-family:'Space Grotesk'">Proof over promises</h3>
+          <p class="muted">Real clients, repeat orders and documented processes. Ask for references.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>Global Partners (sample)</h2>
+          <p class="muted" data-reveal>We collaborate with hospitals, labs and SMEs. Logos below are placeholders — we’ll replace with client references.</p>
+        </div>
+        <div class="logos">
+          <div class="logo" data-reveal>Hospital Ángeles</div>
+          <div class="logo" data-reveal>Clínica Puebla</div>
+          <div class="logo" data-reveal>Lab Central</div>
+          <div class="logo" data-reveal>Acme Industrial</div>
+          <div class="logo" data-reveal>Universidad X</div>
+          <div class="logo" data-reveal>Aquarium MX</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>Certifications & Recognitions</h2>
+          <p class="muted" data-reveal>We’re building an ISO‑friendly system. These are example badges for layout only.</p>
+        </div>
+        <div class="awards">
+          <div class="award" data-reveal data-tilt><b>2024</b><div class="muted">Best UI (layout demo)</div></div>
+          <div class="award" data-reveal data-tilt><b>2023</b><div class="muted">Developer Award (demo)</div></div>
+          <div class="award" data-reveal data-tilt><b>2022</b><div class="muted">Webby Winner (demo)</div></div>
+          <div class="award" data-reveal data-tilt><b>2021</b><div class="muted">Site of the Month (demo)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>Meet Our Team</h2>
+          <p class="muted" data-reveal>Behind every batch is a dedicated team of operators and coordinators.</p>
+        </div>
+        <div class="team">
+          <article class="person" data-reveal data-tilt>
+            <img alt="Team member" src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop"/>
+            <div class="bio"><b>Jake Davis</b><div class="muted">Operations</div></div>
+          </article>
+          <article class="person" data-reveal data-tilt>
+            <img alt="Team member" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"/>
+            <div class="bio"><b>Chlo Parker</b><div class="muted">Quality</div></div>
+          </article>
+          <article class="person" data-reveal data-tilt>
+            <img alt="Team member" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"/>
+            <div class="bio"><b>James Carter</b><div class="muted">Scheduling</div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card" style="display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center" data-reveal data-tilt>
+          <div>
+            <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Innovation</div>
+            <h3 style="font-family:'Space Grotesk'; font-size:clamp(24px,3vw,36px); margin:4px 0 0">From Web Development To Captivating Experiences (layout copy)</h3>
+            <p class="muted">Replace with: From Cut & Sew To Consistent Output.</p>
+          </div>
+          <div style="text-align:right"><a class="cta" href="services.html">Learn more</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Puebla, MX</span></a>
+        <p class="muted" style="margin-top:10px">A textile maquila focused on medical scrubs and uniforms. Modern processes, consistent output.</p>
+      </div>
+      <div>
+        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Company</div>
+        <ul style="list-style:none; padding:0; margin:8px 0 0; color:var(--muted)">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Contact</div>
+        <p class="muted" style="margin:8px 0 0">hello@ditex.mx<br/>Puebla, México</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:18px; display:flex; justify-content:space-between; gap:16px; color:var(--muted)">
+      <small>© <span id="year"></span> DITEX. All rights reserved.</small>
+      <small>Layout patterns inspired by Glow R Webflow template.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="/assets/interactions.js"></script>
+</body>
+</html>

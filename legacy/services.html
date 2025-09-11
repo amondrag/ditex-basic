@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — DITEX • Textile Maquila</title>
+  <meta name="description" content="Cut, sew, and scale: scrubs, uniforms, branding, packaging, QA. DITEX offers end‑to‑end textile manufacturing built for reliability and growth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --ink:#0a0a0a; --paper:#f8fafc; --muted:#6b7280; --line:#e5e7eb; --accent:#0ea5e9; --accent-2:#a78bfa; --radius:18px; --maxw:1200px; --shadow:0 20px 60px rgba(0,0,0,.08) }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .container{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(255,255,255,.8); border-bottom:1px solid var(--line); transition: box-shadow .25s ease, background .25s ease}
+    header.is-scrolled{ background:rgba(255,255,255,.95); box-shadow:var(--shadow) }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:68px}
+    .brand{display:flex; gap:12px; align-items:center; font-weight:800; letter-spacing:.4px}
+    .brand-logo{width:28px; height:28px; border-radius:50%; background:conic-gradient(from 210deg, var(--accent), var(--accent-2))}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    .cta{display:inline-flex; align-items:center; gap:10px; background:#111827; color:#fff; font-weight:700; padding:10px 14px; border-radius:999px}
+
+    /* Hero */
+    .hero{padding:72px 0 24px}
+    .stack{display:grid; gap:4px; font-family:"Space Grotesk"; line-height:1}
+    .line{font-size:clamp(38px, 8vw, 100px); font-weight:800; letter-spacing:-.02em; will-change: transform}
+
+    section{padding:72px 0}
+    .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:24px; border-bottom:1px solid var(--line); padding-bottom:14px}
+    .section-head h2{font-family:"Space Grotesk"; font-size:clamp(28px,3.2vw,44px); margin:0}
+    .section-head p{color:var(--muted); max-width:560px}
+
+    /* Services grid */
+    .services{display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px}
+    .service{padding:18px; border-radius:16px; border:1px solid var(--line); background:#fff; box-shadow:var(--shadow)}
+    .service h3{font-size:18px; margin:6px 0 10px}
+    .service p{color:var(--muted)}
+    .chip{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#11182790; background:#f1f5f9; padding:6px 10px; border-radius:999px}
+
+    /* Process timeline */
+    .timeline{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .step{padding:18px; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:var(--shadow)}
+    .step small{display:block; color:var(--muted)}
+    .step h3{margin:8px 0 6px}
+
+    /* Feature band */
+    .band{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; padding:28px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(90deg, rgba(14,165,233,.06), rgba(167,139,250,.06))}
+
+    /* FAQ */
+    .faq{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    details{border:1px solid var(--line); border-radius:14px; padding:14px 16px; background:#fff; box-shadow:var(--shadow)}
+    summary{cursor:pointer; font-weight:600}
+    summary::-webkit-details-marker{display:none}
+
+    /* Reveal & tilt */
+    [data-reveal]{opacity:0; transform:translateY(16px); transition: all .6s cubic-bezier(.2,.7,.2,1)}
+    .is-visible{opacity:1; transform:none}
+    [data-tilt]{ will-change: transform; transform-style: preserve-3d; transition: transform .12s ease-out; }
+
+    /* Progress bar */
+    body::before{ content:""; position:fixed; left:0; top:0; height:2px; width:calc(var(--scroll,0) * 100vw); background:linear-gradient(90deg, var(--accent), var(--accent-2)); z-index:9999; pointer-events:none }
+
+    footer{border-top:1px solid var(--line); padding:28px 0 60px}
+    .footer-grid{display:grid; grid-template-columns: 1.2fr .8fr .8fr; gap:18px}
+
+    @media (max-width: 1024px){
+      .services{grid-template-columns:repeat(2,1fr)}
+      .timeline{grid-template-columns:repeat(2,1fr)}
+      .faq{grid-template-columns:1fr}
+      .band{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){ .services{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Textile Maquila</span></a>
+      <nav>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="contact.html">Get a quote</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="stack" data-reveal>
+          <div class="line" data-parallax-y="0.12">Cut,</div>
+          <div class="line" data-parallax-y="0.18">sew &</div>
+          <div class="line" data-parallax-y="0.24">scale.</div>
+        </div>
+        <p class="muted" style="max-width:720px; margin-top:10px" data-reveal>End‑to‑end textile manufacturing for medical & industrial apparel. From sampling to packaging and delivery.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>What we do</h2>
+          <p class="muted" data-reveal>Focused capabilities that compound into reliable output and predictable timelines.</p>
+        </div>
+        <div class="services">
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Scrubs</span>
+            <h3>Medical scrubs (2‑piece)</h3>
+            <p>Standard fits, reinforced seams, durable fabrics. Consistent sizing grids.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Uniforms</span>
+            <h3>Custom uniforms</h3>
+            <p>Industrial, lab and service uniforms with trims, reflective tapes and pockets.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Sewing</span>
+            <h3>Cut & sew + finishing</h3>
+            <p>Cutting table, overlock + straight‑stitch lines, buttonholes and button sew.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Branding</span>
+            <h3>Branding & packaging</h3>
+            <p>Embroidery/patches, private label, size stickers, lot codes and bagging.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Sampling</span>
+            <h3>Sampling & pilot runs</h3>
+            <p>Tech packs, prototypes and pre‑production to de‑risk your launch.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">QA</span>
+            <h3>Quality assurance</h3>
+            <p>Inline QC checklists, visual inspection and packaged unit counts.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Logistics</span>
+            <h3>Scheduling & logistics</h3>
+            <p>Lead‑time planning and delivery coordination across central Mexico.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Docs</span>
+            <h3>Process documentation</h3>
+            <p>Traceable work orders, lot numbers and SOPs — ISO‑friendly.</p>
+          </article>
+          <article class="service" data-reveal data-tilt>
+            <span class="chip">Fabrics</span>
+            <h3>Material sourcing</h3>
+            <p>Guidance on fabric blends, trims, colorways and long‑term availability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>How we work</h2>
+          <p class="muted" data-reveal>Clear checkpoints from inquiry to delivery keep projects on‑schedule and visible.</p>
+        </div>
+        <div class="timeline">
+          <div class="step" data-reveal data-tilt>
+            <small>/ 01</small>
+            <h3>Discovery</h3>
+            <p class="muted">Specs, quantities, timelines. Share tech packs or references; we map constraints.</p>
+          </div>
+          <div class="step" data-reveal data-tilt>
+            <small>/ 02</small>
+            <h3>Sampling</h3>
+            <p class="muted">Prototypes, fit checks, size grid approval and fabric confirmation.</p>
+          </div>
+          <div class="step" data-reveal data-tilt>
+            <small>/ 03</small>
+            <h3>Production</h3>
+            <p class="muted">Cut & sew, inline QC, branding and packaging per lot.</p>
+          </div>
+          <div class="step" data-reveal data-tilt>
+            <small>/ 04</small>
+            <h3>Delivery</h3>
+            <p class="muted">Counts, documentation and shipping coordination.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE / BAND -->
+    <section>
+      <div class="container">
+        <div class="band" data-reveal>
+          <div>
+            <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Performance</div>
+            <h3 style="font-family:'Space Grotesk'; font-size:clamp(24px,3vw,36px); margin:4px 0 0">Scale without losing quality.</h3>
+            <p class="muted">We track lots and maintain checklists so ramping volume doesn’t break consistency.</p>
+          </div>
+          <div style="text-align:right"><a class="cta" href="contact.html">Request a quote</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2 data-reveal>FAQ</h2>
+          <p class="muted" data-reveal>Have a question that’s not here? <a href="contact.html">Get in touch</a>.</p>
+        </div>
+        <div class="faq">
+          <details data-reveal>
+            <summary>What are your typical lead times?</summary>
+            <p class="muted">Samples: ~7 days. Production: ~7–14 days depending on quantities and trims.</p>
+          </details>
+          <details data-reveal>
+            <summary>What’s your minimum order?</summary>
+            <p class="muted">Pilot runs start at ~50 units; we’ll advise the most cost‑effective batch size.</p>
+          </details>
+          <details data-reveal>
+            <summary>Can you handle embroidery/labels?</summary>
+            <p class="muted">Yes—embroidered logos, woven labels, size stickers, and bagging with lot codes.</p>
+          </details>
+          <details data-reveal>
+            <summary>Do you ship outside Puebla/CDMX?</summary>
+            <p class="muted">Yes—we coordinate deliveries across central Mexico and can arrange broader freight.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="band" data-reveal>
+          <div>
+            <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Start</div>
+            <h3 style="font-family:'Space Grotesk'; font-size:clamp(24px,3vw,36px); margin:4px 0 0">Tell us about your run</h3>
+            <p class="muted">Send specs, quantities, references—We’ll respond in 24–48h with timing and costs.</p>
+          </div>
+          <div style="text-align:right"><a class="cta" href="contact.html">Start a project</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-logo"></span><span><em style="font-family:'Space Grotesk'">DITEX</em> • Puebla, MX</span></a>
+        <p class="muted" style="margin-top:10px">A textile maquila focused on medical scrubs and uniforms. Modern processes, consistent output.</p>
+      </div>
+      <div>
+        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Company</div>
+        <ul style="list-style:none; padding:0; margin:8px 0 0; color:var(--muted)">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="muted" style="text-transform:uppercase; letter-spacing:.14em; font-weight:700">Contact</div>
+        <p class="muted" style="margin:8px 0 0">hello@ditex.mx<br/>Puebla, México</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:18px; display:flex; justify-content:space-between; gap:16px; color:var(--muted)">
+      <small>© <span id="year"></span> DITEX. All rights reserved.</small>
+      <small>Patterns inspired by top Webflow templates.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="assets/interactions.js"></script>
+</body>
+</html>
